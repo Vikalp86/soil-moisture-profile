@@ -13,6 +13,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+This code follows the work of -- Albergel, C., Rüdiger, C., Pellarin, T., Calvet, 
+J. C., Fritz, N., Froissard, F., ... & Martin, E. (2008). From near-surface to 
+root-zone soil moisture using an exponential filter: an assessment of the method 
+based on in-situ observations and model simulations. Hydrology and Earth System 
+Sciences, 12(6), 1323-1337.
+
 Authors:  Kel Markert, Vikalp Mishra, W. Lee Ellenburg
 Contact: kel.markert@uah.edu
 Copyright (c) 2019, Authors
@@ -30,9 +36,7 @@ import seaborn as sns
 def nse(df):
     """
     Nash-sutcliffe model efficiency coefficient function
-
     Args: df (pandas.DataFrame): pandas dataframe with 'simulation' and 'observation' columns
-
     Returns: out (float): calculated NSE value
     """
 
@@ -46,9 +50,7 @@ def nse(df):
 def rmse(df):
     """
     Root mean square error function
-
     Args: df (pandas.DataFrame): pandas dataframe with 'simulation' and 'observation' columns
-
     Returns: out (float): calculated RMSE value
     """
 
@@ -61,9 +63,7 @@ def rmse(df):
 def r(df):
     """
     Correlation coefficient function
-
     Args: df (pandas.DataFrame): pandas dataframe with 'simulation' and 'observation' columns
-
     Returns: out (float): calculated correlation coefficient value
     """
 
@@ -76,9 +76,7 @@ def r(df):
 def bias(df):
     """
     Bias function
-
     Args: df (pandas.DataFrame): pandas dataframe with 'simulation' and 'observation' columns
-
     Returns: out (float): calculated bias value
     """
 
@@ -91,9 +89,7 @@ def bias(df):
 def ubRmse(df):
     """
     Un-biased RMSE function
-
     Args: df (pandas.DataFrame): pandas dataframe with 'simulation' and 'observation' columns
-
     Returns: out (float): calculated un-biased rmse value
     """
 
@@ -106,7 +102,7 @@ def ubRmse(df):
 def calc_Topt(sur,obs,Tvals,objfunc='nse'):
     """
     Function to calibrate the T parameter using a brute-force method
-
+   
     Args: sur (pandas.Series): pandas series of the surface soil moisture
           obs (pandas.Series): pandas series of the soil moisture at layer x to calibrate
           Tvals (list,tuple,set,np.array): sequence of values to test for optimal value
