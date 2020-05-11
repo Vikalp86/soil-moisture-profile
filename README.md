@@ -1,7 +1,7 @@
 # soil-moisture-profile
 The Exponential function used in this comparative analysis to deduce root-zone moisture content was developed by Wagner et al. (1999) and later refined into a recursive form by Albergel et al. (2008). It’s exponential decay function is based on a time lagged relationship between surface variations and the root-zone moisture content. The recursive formula for deducing root-zone moisture content is given as:
 \begin{equation}
-	SM_(rz(t))^*=SM_(rz(t-1))^*+K_t (SM_sfc^*-SM_(rz(t-1))^*)	
+	SM_{rz(t)}^*=SM_{rz(t-1)}^*+K_t (SM_sfc^*-SM_{rz(t-1)}^*)	
  \end{equation}
  
 SM* is the normalized SM content based on minimum and maximum moisture content over a period of time, rz and sfc refers to root-zone and surface values, respectively; t is the time (in days) and K is the gain function computed as:
