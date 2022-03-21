@@ -185,6 +185,14 @@ def pome(sur,avg,bott,D,inflection=None,fc=None,resid=None,sat=None,soilType=Non
     Function to
 
     soilType = USDA soiltype
+    
+    sur, avg & bott are SM values in effective soil moisture
+    D           - total layer depth in cm (~100)
+    inflection  - depth in cm at which inflection point is observed 
+    fc          - field capacity
+    resid       - residual soil moisture
+    sat         - satuarated SM 
+    soilType    - USDA soil classification (to calculate soil characteristics if fc, resid & sat values are not know)
 
     """
 
